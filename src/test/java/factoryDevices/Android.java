@@ -11,12 +11,13 @@ public class Android implements IDevices{
     @Override
     public AndroidDriver create() {
         DesiredCapabilities config = new DesiredCapabilities();
-        config.setCapability("appium:deviceName","Diplomado9");
+        config.setCapability("appium:deviceName","emulator-5554");
         config.setCapability("appium:platformVersion","9.0");
-        config.setCapability("appium:appPackage","com.vrproductiveapps.whendo");
-        config.setCapability("appium:appActivity","com.vrproductiveapps.whendo.ui.HomeActivity");
+        config.setCapability("appium:appPackage","com.google.android.youtube");
+        config.setCapability("appium:appActivity","com.google.android.youtube.app.honeycomb.Shell$HomeActivity");
         config.setCapability("platformName","Android");
         config.setCapability("appium:automationName","uiautomator2");
+
         AndroidDriver driver = null;
         try {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),config);

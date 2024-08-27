@@ -1,4 +1,4 @@
-package singletonSesion;
+package singletonSession;
 
 import factoryDevices.FactoryDevice;
 import io.appium.java_client.AppiumDriver;

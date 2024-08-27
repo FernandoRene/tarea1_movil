@@ -97,7 +97,7 @@ public class BasicAppium {
         // Verify video is playing
         WebElement videoPlayer = driver.findElement(By.id("com.google.android.youtube:id/player_view"));
         Assertions.assertTrue(videoPlayer.isDisplayed(), "Video player is not displayed");
-        /*
+
         // Get video title
         WebElement videoTitle = driver.findElement(By.id("com.google.android.youtube:id/title"));
         String actualTitle = videoTitle.getText();
@@ -105,6 +105,6 @@ public class BasicAppium {
                 "Video title does not contain 'Numb' and 'Linkin Park'");
 
         System.out.println("Video title: " + actualTitle);
-        */
+
     }
 }

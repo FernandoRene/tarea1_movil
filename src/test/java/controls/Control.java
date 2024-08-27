@@ -2,7 +2,11 @@ package controls;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import singletonSesion.Session;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import singletonSession.Session;
+
+import java.time.Duration;
 
 public class Control {
     protected By locator;
@@ -34,5 +38,9 @@ public class Control {
             return false;
         }
 
+    }
+    public void waitForVisibility(int timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(Session.getSession().getDevice(), Duration.ofSeconds(timeoutInSeconds));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
